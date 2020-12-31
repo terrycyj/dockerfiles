@@ -1,0 +1,4 @@
+FROM ccr.ccs.tencentyun.com/easybase/javabase:1.0
+ARG JAR_FILE
+COPY ${JAR_FILE} /app.jar
+CMD java -Djava.security.egd="file:/dev/./urandom" $JAVA_OPTS -jar /app.jar
